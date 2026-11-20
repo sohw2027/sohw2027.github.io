@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SPEECHCON 2027</title>
+<meta name="description" content="SPEECHCON 2027 — international conference on speech and language technology, 25–29 October 2027, New Delhi, India.">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   EDIT COLOURS HERE
+   ============================================================ */
+:root{
+  --blue:#15567f;        /* nav bar + headings            */
+  --blue-dark:#0e3d5c;   /* darker blue, footer           */
+  --blue-soft:#eaf2f8;   /* pale blue table headers       */
+  --gold:#f2b705;        /* buttons + underlines          */
+  --ink:#233240; --muted:#6b8095; --line:#d7e3ed; --bg:#f4f8fb;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+     font-family:Lato,"Segoe UI",Arial,sans-serif;font-size:16px;line-height:1.65}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+a{color:var(--blue)}
+img{max-width:100%}
+
+/* ---------- identity strip ---------- */
+.top{background:#fff;border-bottom:4px solid var(--blue)}
+.top .wrap{display:flex;align-items:center;gap:26px;padding:22px 20px}
+.top img.mark{width:104px;height:104px;flex:none}
+.namecard{flex:1;min-width:0}
+.namecard h1{font-family:"Barlow Condensed",sans-serif;font-weight:700;
+  font-size:clamp(32px,5.4vw,62px);letter-spacing:.06em;line-height:1;margin:0;color:var(--blue-dark)}
+.namecard h1 span{color:var(--gold)}
+.namecard p{margin:9px 0 0;font-size:13.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted);font-weight:700}
+/* second logo, top right — replace img/logo-right.png with your society logo */
+.society{width:132px;height:auto;flex:none}
+
+.banner{display:block;width:100%;height:auto}
+
+/* ---------- navigation ---------- */
+nav{background:var(--blue);position:sticky;top:0;z-index:30;box-shadow:0 2px 10px rgba(14,61,92,.18)}
+nav .bar{max-width:1180px;margin:0 auto;display:flex;align-items:center}
+nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;flex:1}
+nav a{display:block;padding:15px 16px;color:#eaf2f8;text-decoration:none;
+  font-size:14.5px;font-weight:700}
+nav a:hover,nav a.on{background:var(--blue-dark);color:#fff}
+#burger{display:none;background:none;border:0;color:#fff;font-size:24px;padding:12px 18px;cursor:pointer}
+
+/* ---------- ticker ---------- */
+.ticker{background:#fff8e1;border-bottom:1px solid #f0e0ae;overflow:hidden;white-space:nowrap;
+  height:42px;line-height:42px;font-size:14.5px}
+.ticker .track{display:inline-block;padding-left:100%;animation:scroll 34s linear infinite}
+.ticker:hover .track{animation-play-state:paused}
+.ticker span{margin-right:80px;color:#7a5c00;font-weight:700}
+.ticker a{color:#b07d00}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+
+/* ---------- sections ---------- */
+main{padding:34px 0 10px}
+section{margin-bottom:40px;scroll-margin-top:72px}
+h2{font-family:"Barlow Condensed",sans-serif;font-size:30px;letter-spacing:.03em;
+   color:var(--blue-dark);margin:0 0 14px;text-transform:uppercase}
+h2::after{content:"";display:block;width:58px;height:4px;background:var(--gold);margin-top:8px}
+h3{font-family:"Barlow Condensed",sans-serif;font-size:21px;letter-spacing:.03em;
+   color:var(--blue-dark);margin:22px 0 6px;text-transform:uppercase}
+.card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:24px 26px}
+.card.flat{padding:0;overflow:hidden}
+.cols{display:grid;grid-template-columns:290px 1fr;gap:30px;align-items:start}
+
+/* ---------- clock ---------- */
+.clockcard{background:linear-gradient(180deg,#2a8fd4,#15567f);color:#fff;border-radius:8px;
+  padding:22px 18px;text-align:center}
+.clockcard h3{color:#fff;margin:0 0 12px;font-size:25px;font-weight:600}
+#clock{background:#fff;color:var(--blue-dark);border-radius:22px;padding:9px 8px;
+  font-weight:900;font-size:18px;font-variant-numeric:tabular-nums}
+.days{margin-top:16px;font-size:13px;letter-spacing:.06em;text-transform:uppercase;opacity:.92}
+.days b{display:block;font-size:40px;line-height:1.05;letter-spacing:0}
+.emerg{margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.3);font-size:13px}
+.emerg a{color:#ffdd77;text-decoration:none;word-break:break-all}
+.sidebox{margin-top:18px}
+.sidebox h3{margin:0 0 10px;font-size:19px}
+.sidebox ul{margin:0;padding-left:18px;font-size:14.5px}
+.sidebox li{margin-bottom:6px}
+
+/* ---------- bits ---------- */
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+.btn{display:inline-block;padding:12px 26px;border-radius:4px;text-decoration:none;
+  font-weight:900;font-size:14.5px;letter-spacing:.04em;text-transform:uppercase}
+.btn.p{background:var(--gold);color:#4a3600}
+.btn.s{background:var(--blue);color:#fff}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line)}
+th{background:var(--blue-soft);color:var(--blue-dark);font-size:13px;
+   letter-spacing:.08em;text-transform:uppercase}
+td.date,td.num{font-weight:700;white-space:nowrap}
+tr.past td{color:var(--muted);text-decoration:line-through}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+.spk{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden;text-align:center}
+.spk img{width:100%;display:block}
+.spk div{padding:14px 12px}
+.spk b{display:block;font-size:16.5px;color:var(--blue-dark)}
+.spk small{color:var(--muted)}
+.grid2 img{border-radius:8px;display:block;width:100%}
+.sponsors{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;
+  background:#fff;border:1px solid var(--line);border-radius:8px;padding:24px}
+.slot{width:150px;height:72px;border:2px dashed var(--line);border-radius:6px;display:flex;
+  align-items:center;justify-content:center;color:#9bb0c2;font-size:11.5px;letter-spacing:.07em;
+  text-transform:uppercase}
+.hint{font-size:12.5px;color:var(--muted);font-style:italic;margin-top:7px}
+ul.topics{columns:2;margin:6px 0 0;padding-left:20px}
+ul.topics li{margin-bottom:4px;break-inside:avoid}
+
+footer{background:var(--blue-dark);color:#bcd4e6;margin-top:30px;padding:30px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{color:#ffdd77;text-decoration:none}
+
+@media(max-width:880px){
+  .cols,.grid2{grid-template-columns:1fr}
+  .grid3{grid-template-columns:1fr}
+  ul.topics{columns:1}
+  .society{width:76px}
+  .top .wrap{gap:14px}
+  #burger{display:block}
+  nav ul{display:none;width:100%;flex-direction:column}
+  nav ul.open{display:flex}
+  nav .bar{flex-wrap:wrap}
+}
+</style>
+</head>
+<body>
+
+<!-- ====================== HEADER ====================== -->
+<header class="top">
+  <div class="wrap">
+    <img class="mark" src="img/logo.png" alt="SPEECHCON 2027 logo">
+    <div class="namecard">
+      <h1>SPEECHCON <span>2027</span></h1>
+      <p>25–29 October 2027 &nbsp;/&nbsp; New Delhi, India<br>India Habitat Centre</p>
+    </div>
+    <img class="society" src="img/logo-right.png" alt="Society logo">
+  </div>
+</header>
+
+<img class="banner" src="img/banner.png" alt="">
+
+<!-- ====================== NAVIGATION ====================== -->
+<nav>
+  <div class="bar">
+    <button id="burger" aria-label="Menu">&#9776;</button>
+    <ul id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#calls">Calls</a></li>
+      <li><a href="#authors">Authors</a></li>
+      <li><a href="#program">Program</a></li>
+      <li><a href="#students">Students</a></li>
+      <li><a href="#venue">Venue</a></li>
+      <li><a href="#registration">Registration</a></li>
+      <li><a href="#sponsors">Sponsors</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ====================== NEWS TICKER ====================== -->
+<div class="ticker"><div class="track">
+  <span>Registration is now open — <a href="#registration">register here</a></span>
+  <span>Paper submission deadline extended to 15 March 2027</span>
+  <span>Keynote speakers announced</span>
+  <span>Travel grant applications close 1 April 2027</span>
+</div></div>
+
+<main class="wrap">
+
+<!-- ====================== HOME ====================== -->
+<div class="cols" id="home">
+  <aside>
+    <div class="clockcard">
+      <h3>New Delhi Time</h3>
+      <div id="clock">—</div>
+      <div class="days"><b id="days">—</b>days to go</div>
+      <div class="emerg">Emergency contact<br>
+        <a href="mailto:emergency@speechcon2027.org">emergency@speechcon2027.org</a></div>
+    </div>
+    <div class="card sidebox">
+      <h3>Quick links</h3>
+      <ul>
+        <li><a href="#calls">Submit a paper</a></li>
+        <li><a href="#authors">Author templates</a></li>
+        <li><a href="#registration">Registration rates</a></li>
+        <li><a href="#venue">Hotels &amp; travel</a></li>
+        <li><a href="#students">Travel grants</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <div>
+    <section>
+      <h2>Welcome to SPEECHCON 2027</h2>
+      <div class="card">
+        <p><b>SPEECHCON 2027 will be held from 25 to 29 October 2027 in New Delhi, India.</b>
+           The conference brings together researchers and practitioners working on speech, language
+           and audio technology for five days of talks, tutorials and demonstrations.</p>
+        <p>Replace this paragraph with your own welcome message from the general chairs. Two or three
+           sentences is enough — say what the conference is, who it is for, and why someone should come.</p>
+        <div class="btns">
+          <a class="btn p" href="#calls">Submit a paper</a>
+          <a class="btn s" href="#registration">Register now</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Key dates</h2>
+      <div class="card flat">
+        <table>
+          <tr><th>Milestone</th><th>Date</th></tr>
+          <tr class="past"><td>Call for papers opens</td><td class="date">1 December 2026</td></tr>
+          <tr><td>Paper submission deadline</td><td class="date">15 March 2027</td></tr>
+          <tr><td>Notification of acceptance</td><td class="date">30 May 2027</td></tr>
+          <tr><td>Camera-ready papers due</td><td class="date">20 June 2027</td></tr>
+          <tr><td>Early registration closes</td><td class="date">31 July 2027</td></tr>
+          <tr><td>Conference</td><td class="date">25–29 October 2027</td></tr>
+        </table>
+      </div>
+      <p class="hint">All deadlines are 23:59 AoE (Anywhere on Earth).</p>
+    </section>
+  </div>
+</div>
+
+<!-- ====================== ABOUT ====================== -->
+<section id="about">
+  <h2>About</h2>
+  <div class="card">
+    <p>Two or three sentences on the history of the conference, who organises it and what makes
+       this edition different. Mention the host institution and the society behind it.</p>
+    <h3>Organising committee</h3>
+    <table>
+      <tr><th>Role</th><th>Name</th><th>Affiliation</th></tr>
+      <tr><td>General Chair</td><td>Name Surname</td><td>University</td></tr>
+      <tr><td>Technical Program Chair</td><td>Name Surname</td><td>University</td></tr>
+      <tr><td>Publication Chair</td><td>Name Surname</td><td>University</td></tr>
+      <tr><td>Local Arrangements</td><td>Name Surname</td><td>University</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ====================== KEYNOTES ====================== -->
+<section id="keynotes">
+  <h2>Keynote speakers</h2>
+  <div class="grid3">
+    <div class="spk"><img src="img/speaker.png" alt="">
+      <div><b>Speaker name</b><small>University / Company</small></div></div>
+    <div class="spk"><img src="img/speaker.png" alt="">
+      <div><b>Speaker name</b><small>University / Company</small></div></div>
+    <div class="spk"><img src="img/speaker.png" alt="">
+      <div><b>Speaker name</b><small>University / Company</small></div></div>
+  </div>
+  <p class="hint">Replace img/speaker.png with each speaker's own photo (square, about 400 × 400 px).</p>
+</section>
+
+<!-- ====================== CALLS ====================== -->
+<section id="calls">
+  <h2>Call for papers</h2>
+  <div class="card">
+    <p>Papers are invited on all aspects of speech and language technology. Submissions are
+       peer reviewed and accepted papers appear in the conference proceedings.</p>
+    <h3>Topics</h3>
+    <ul class="topics">
+      <li>Speech recognition</li><li>Speech synthesis</li><li>Speaker recognition</li>
+      <li>Spoken dialogue systems</li><li>Speech enhancement</li><li>Prosody and phonetics</li>
+      <li>Low-resource languages</li><li>Multimodal processing</li><li>Evaluation and resources</li>
+      <li>Speech and health</li>
+    </ul>
+    <h3>Submission</h3>
+    <p>Papers must be up to 4 pages plus one page of references, anonymised for double-blind review,
+       and submitted in PDF through the submission system.</p>
+    <div class="btns"><a class="btn p" href="#">Go to submission system</a></div>
+  </div>
+</section>
+
+<!-- ====================== AUTHORS ====================== -->
+<section id="authors">
+  <h2>Information for authors</h2>
+  <div class="card">
+    <h3>Templates</h3>
+    <p>Download the LaTeX and Word templates and follow them exactly — papers that do not match
+       the template are returned without review.</p>
+    <div class="btns">
+      <a class="btn s" href="#">LaTeX template</a>
+      <a class="btn s" href="#">Word template</a>
+    </div>
+    <h3>Presentation</h3>
+    <p>Oral presentations are 15 minutes plus 5 minutes of questions. Posters are A0 portrait.
+       At least one author of every accepted paper must register and present; papers that are
+       not presented are withdrawn from the proceedings.</p>
+  </div>
+</section>
+
+<!-- ====================== PROGRAM ====================== -->
+<section id="program">
+  <h2>Program at a glance</h2>
+  <div class="card flat">
+    <table>
+      <tr><th>Day</th><th>Morning</th><th>Afternoon</th><th>Evening</th></tr>
+      <tr><td class="num">Mon 25 Oct</td><td>Tutorials</td><td>Tutorials</td><td>Welcome reception</td></tr>
+      <tr><td class="num">Tue 26 Oct</td><td>Keynote 1 + oral sessions</td><td>Poster session A</td><td>—</td></tr>
+      <tr><td class="num">Wed 27 Oct</td><td>Keynote 2 + oral sessions</td><td>Poster session B</td><td>Conference dinner</td></tr>
+      <tr><td class="num">Thu 28 Oct</td><td>Special sessions</td><td>Show &amp; tell</td><td>—</td></tr>
+      <tr><td class="num">Fri 29 Oct</td><td>Keynote 3</td><td>Closing &amp; awards</td><td>—</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ====================== STUDENTS ====================== -->
+<section id="students">
+  <h2>Student information</h2>
+  <div class="card">
+    <h3>Travel grants</h3>
+    <p>A limited number of travel grants is available to students presenting a paper. Applications
+       close on 1 April 2027 and are assessed on need and on the quality of the accepted paper.</p>
+    <h3>Mentoring and volunteering</h3>
+    <p>Students can be matched with a senior researcher for the week, and volunteers receive free
+       registration in exchange for about eight hours of help during the conference.</p>
+    <div class="btns"><a class="btn p" href="#">Apply for a travel grant</a></div>
+  </div>
+</section>
+
+<!-- ====================== VENUE ====================== -->
+<section id="venue">
+  <h2>Venue &amp; travel</h2>
+  <div class="grid2">
+    <img src="img/venue.png" alt="">
+    <div>
+      <p><b>India Habitat Centre</b><br>Lodhi Road, New Delhi 110003, India</p>
+      <p>Say how to reach the venue from the airport and the nearest metro station, then list
+         two or three hotels with booking codes and their walking distance to the venue.</p>
+      <h3>Visa</h3>
+      <p>Delegates who need an invitation letter for a visa should request one after registering.</p>
+      <div class="btns"><a class="btn s" href="#">Request a visa letter</a></div>
+    </div>
+  </div>
+  <p class="hint">Replace img/venue.png with a photo of your own venue or host city (about 800 × 500 px).</p>
+</section>
+
+<!-- ====================== REGISTRATION ====================== -->
+<section id="registration">
+  <h2>Registration</h2>
+  <div class="card flat">
+    <table>
+      <tr><th>Category</th><th>Early (to 31 Jul)</th><th>Late / on site</th></tr>
+      <tr><td>Member</td><td class="num">₹ 18,000</td><td class="num">₹ 24,000</td></tr>
+      <tr><td>Non-member</td><td class="num">₹ 22,000</td><td class="num">₹ 28,000</td></tr>
+      <tr><td>Student member</td><td class="num">₹ 9,000</td><td class="num">₹ 12,000</td></tr>
+      <tr><td>One-day pass</td><td class="num">₹ 7,000</td><td class="num">₹ 9,000</td></tr>
+    </table>
+  </div>
+  <div class="card" style="margin-top:18px">
+    <p>The fee includes access to all sessions, the proceedings, lunches and the welcome reception.
+       The conference dinner is charged separately. Cancellations before 1 September 2027 are
+       refunded minus a handling fee; after that date the fee is not refundable but may be transferred.</p>
+    <div class="btns"><a class="btn p" href="#">Register now</a></div>
+  </div>
+</section>
+
+<!-- ====================== SPONSORS ====================== -->
+<section id="sponsors">
+  <h2>Our sponsors</h2>
+  <div class="sponsors">
+    <div class="slot">Sponsor logo</div><div class="slot">Sponsor logo</div>
+    <div class="slot">Sponsor logo</div><div class="slot">Sponsor logo</div>
+    <div class="slot">Sponsor logo</div><div class="slot">Sponsor logo</div>
+  </div>
+  <p class="hint">Replace each dashed box with &lt;img src="img/sponsor1.png" alt="Sponsor name"&gt; and link it to their site.</p>
+</section>
+
+<!-- ====================== CONTACT ====================== -->
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card flat">
+    <table>
+      <tr><th>Enquiry</th><th>Email</th></tr>
+      <tr><td>General enquiries</td><td><a href="mailto:info@speechcon2027.org">info@speechcon2027.org</a></td></tr>
+      <tr><td>Technical program</td><td><a href="mailto:program@speechcon2027.org">program@speechcon2027.org</a></td></tr>
+      <tr><td>Registration</td><td><a href="mailto:registration@speechcon2027.org">registration@speechcon2027.org</a></td></tr>
+      <tr><td>Sponsorship</td><td><a href="mailto:sponsors@speechcon2027.org">sponsors@speechcon2027.org</a></td></tr>
+    </table>
+  </div>
+  <p class="hint">For a contact form, make a Google Form and paste its iframe code here.</p>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>SPEECHCON 2027</b><br>25–29 October 2027, New Delhi, India</div>
+    <div>General enquiries<br><a href="mailto:info@speechcon2027.org">info@speechcon2027.org</a></div>
+  </div>
+</footer>
+
+<script>
+/* ---------- live clock + countdown : EDIT THESE TWO LINES ---------- */
+var TZ    = "Asia/Kolkata";                        /* conference time zone */
+var START = new Date("2027-10-25T00:00:00+05:30"); /* first day of conference */
+
+function tick(){
+  var now = new Date();
+  var f = new Intl.DateTimeFormat("en-CA",{timeZone:TZ,year:"numeric",month:"2-digit",
+          day:"2-digit",hour:"2-digit",minute:"2-digit",second:"2-digit",hourCycle:"h23"});
+  var p={}; f.formatToParts(now).forEach(function(x){p[x.type]=x.value;});
+  document.getElementById("clock").textContent =
+    p.year+"-"+p.month+"-"+p.day+"  "+p.hour+":"+p.minute+":"+p.second;
+  var d = Math.ceil((START-now)/86400000);
+  document.getElementById("days").textContent = d>0?d:0;
+  setTimeout(tick,1000);
+}
+tick();
+
+/* ---------- mobile menu ---------- */
+var menu = document.getElementById("menu");
+document.getElementById("burger").onclick = function(){ menu.classList.toggle("open"); };
+menu.addEventListener("click", function(e){
+  if(e.target.tagName === "A") menu.classList.remove("open");
+});
+
+/* ---------- highlight the section you are reading ---------- */
+var links = {};
+[].forEach.call(menu.querySelectorAll("a"), function(a){ links[a.getAttribute("href").slice(1)] = a; });
+var obs = new IntersectionObserver(function(entries){
+  entries.forEach(function(en){
+    var a = links[en.target.id];
+    if(!a) return;
+    if(en.isIntersecting){
+      [].forEach.call(menu.querySelectorAll("a"), function(x){ x.classList.remove("on"); });
+      a.classList.add("on");
+    }
+  });
+},{rootMargin:"-70px 0px -70% 0px"});
+[].forEach.call(document.querySelectorAll("section[id], #home"), function(s){ obs.observe(s); });
+</script>
+</body>
+</html>
