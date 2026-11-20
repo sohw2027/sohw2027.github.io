@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SOHW 2027 — IIT Kharagpur</title>
-<meta name="description" content="SoHW 2027, hosted by IIT Kharagpur. Dates and venue to be confirmed.">
+<title>SOHW 2027 — International Conference on The Science of Happiness and Well-being</title>
+<meta name="description" content="SOHW 2027 — International Conference on The Science of Happiness and Well-being, 1–2 February 2027, IIT Kharagpur Research Park, New Town Rajarhat, India.">
 <link rel="icon" href="img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,11 +32,17 @@ img{max-width:100%}
 .top{background:#fff;border-bottom:4px solid var(--blue)}
 .top .wrap{display:flex;align-items:center;gap:26px;padding:22px 20px}
 .top img.mark{width:110px;height:auto;flex:none}
-.namecard{flex:1;min-width:0}
+/* ---- EDIT THE HEADING SIZES HERE ---- */
+.namecard{flex:1;min-width:0;text-align:center}            /* centred between the two logos */
 .namecard h1{font-family:"Barlow Condensed",sans-serif;font-weight:700;
-  font-size:clamp(32px,5.4vw,62px);letter-spacing:.06em;line-height:1;margin:0;color:var(--blue-dark)}
+  font-size:clamp(30px,4.4vw,52px);letter-spacing:.06em;line-height:1;margin:0;color:var(--blue-dark)}
 .namecard h1 span{color:var(--gold)}
-.namecard p{margin:9px 0 0;font-size:13.5px;letter-spacing:.14em;
+.conf-title{font-family:"Barlow Condensed",sans-serif;font-weight:600;
+  font-size:clamp(15px,2.05vw,24px);letter-spacing:.015em;line-height:1.25;
+  color:var(--blue);margin:7px 0 0}
+.conf-sub{font-size:clamp(12px,1.45vw,15px);font-style:italic;line-height:1.35;
+  color:var(--muted);margin:4px 0 0}
+.meta{margin:10px 0 0;font-size:12.5px;letter-spacing:.12em;line-height:1.5;
   text-transform:uppercase;color:var(--muted);font-weight:700}
 /* second logo, top right — replace img/logo-right.png with your society logo */
 .society{width:132px;height:auto;flex:none}
@@ -142,7 +148,9 @@ footer a{color:#ffdd77;text-decoration:none}
     <img class="mark" src="img/logo.png" alt="IIT Kharagpur">
     <div class="namecard">
       <h1>SOHW <span>2027</span></h1>
-      <p>01–02 February 2027 &nbsp;/&nbsp; IIT Kharagpur Research Park<br> NewTown Rajarhat, India </p>
+      <p class="conf-title">International Conference on The Science of Happiness and Well-being</p>
+      <p class="conf-sub">(Interdisciplinary Pathways to Sustainable and Inclusive Futures)</p>
+      <p class="meta">01–02 February 2027 &nbsp;/&nbsp; IIT Kharagpur Research Park<br>NewTown Rajarhat, India</p>
     </div>
     <img class="society" src="img/logo-right.png" alt="75 years of IIT Kharagpur">
   </div>
@@ -172,9 +180,9 @@ footer a{color:#ffdd77;text-decoration:none}
 <!-- ====================== NEWS TICKER ====================== -->
 <div class="ticker"><div class="track">
   <span>Registration is now open — <a href="#registration">register here</a></span>
-  <span>Paper submission deadline extended to 15 March 2027</span>
+  <span>Abstract submission deadline: 20 December 2026</span>
   <span>Keynote speakers announced</span>
-  <span>Travel grant applications close 1 April 2027</span>
+  <span>Travel grant applications close 20 December 2026</span>
 </div></div>
 
 <main class="wrap">
@@ -183,7 +191,7 @@ footer a{color:#ffdd77;text-decoration:none}
 <div class="cols" id="home">
   <aside>
     <div class="clockcard">
-      <h3>Kharagpur Time</h3>
+      <h3>Kolkata Time</h3>
       <div id="clock">—</div>
       <div class="days"><b id="days">—</b>days to go</div>
       <div class="emerg">Emergency contact<br>
@@ -203,11 +211,12 @@ footer a{color:#ffdd77;text-decoration:none}
 
   <div>
     <section>
-      <h2>Welcome to SoHW 2027: On the Occasion of Platinum Jubilee Celebration of IIT Kharagpur</h2>
+      <h2>Welcome to SOHW 2027</h2>
       <div class="card">
-        <p><b>SoHW 2027 will be held from 01 to 02 February 2027 at IIT Kharagpur Research Park, New Town, Kolkata.</b>
-           The conference brings together researchers and practitioners working on speech, language
-           and audio technology for five days of talks, tutorials and demonstrations.</p>
+        <p><b>SOHW 2027 will be held on 1 and 2 February 2027 at the IIT Kharagpur Research Park,
+           New Town, Rajarhat.</b> The conference brings together researchers and practitioners from
+           psychology, public health, economics, education, management and design to examine what
+           makes lives and communities go well — and how that knowledge turns into policy and practice.</p>
         <p>Replace this paragraph with your own welcome message from the general chairs. Two or three
            sentences is enough — say what the conference is, who it is for, and why someone should come.</p>
         <div class="btns">
@@ -222,12 +231,12 @@ footer a{color:#ffdd77;text-decoration:none}
       <div class="card flat">
         <table>
           <tr><th>Milestone</th><th>Date</th></tr>
-          <tr class="past"><td>Call for papers opens</td><td class="date">1 December 2026</td></tr>
-          <tr><td>Paper submission deadline</td><td class="date">15 March 2027</td></tr>
-          <tr><td>Notification of acceptance</td><td class="date">30 May 2027</td></tr>
-          <tr><td>Camera-ready papers due</td><td class="date">20 June 2027</td></tr>
-          <tr><td>Early registration closes</td><td class="date">31 July 2027</td></tr>
-          <tr><td>Conference</td><td class="date">25–29 October 2027</td></tr>
+          <tr class="past"><td>Call for abstracts opens</td><td class="date">1 November 2026</td></tr>
+          <tr><td>Abstract submission deadline</td><td class="date">20 December 2026</td></tr>
+          <tr><td>Notification of acceptance</td><td class="date">5 January 2027</td></tr>
+          <tr><td>Full paper / final abstract due</td><td class="date">15 January 2027</td></tr>
+          <tr><td>Early registration closes</td><td class="date">20 January 2027</td></tr>
+          <tr><td>Conference</td><td class="date">1–2 February 2027</td></tr>
         </table>
       </div>
       <p class="hint">All deadlines are 23:59 AoE (Anywhere on Earth).</p>
@@ -270,14 +279,16 @@ footer a{color:#ffdd77;text-decoration:none}
 <section id="calls">
   <h2>Call for papers</h2>
   <div class="card">
-    <p>Papers are invited on all aspects of speech and language technology. Submissions are
-       peer reviewed and accepted papers appear in the conference proceedings.</p>
+    <p>Abstracts are invited on all aspects of the science of happiness and well-being, from any
+       discipline. Submissions are peer reviewed and accepted contributions appear in the
+       conference proceedings.</p>
     <h3>Topics</h3>
     <ul class="topics">
-      <li>Speech recognition</li><li>Speech synthesis</li><li>Speaker recognition</li>
-      <li>Spoken dialogue systems</li><li>Speech enhancement</li><li>Prosody and phonetics</li>
-      <li>Low-resource languages</li><li>Multimodal processing</li><li>Evaluation and resources</li>
-      <li>Speech and health</li>
+      <li>Positive psychology and flourishing</li><li>Mental health and resilience</li>
+      <li>Happiness economics and policy</li><li>Workplace and organisational well-being</li>
+      <li>Education and student well-being</li><li>Mindfulness and contemplative practice</li>
+      <li>Digital technology and well-being</li><li>Measuring well-being</li>
+      <li>Sustainability and inclusive futures</li><li>Community and social connection</li>
     </ul>
     <h3>Submission</h3>
     <p>Papers must be up to 4 pages plus one page of references, anonymised for double-blind review,
@@ -298,7 +309,7 @@ footer a{color:#ffdd77;text-decoration:none}
       <a class="btn s" href="#">Word template</a>
     </div>
     <h3>Presentation</h3>
-    <p>Oral presentations are 15 minutes plus 5 minutes of questions. Posters are A0 portrait.
+    <p>Oral presentations are 12 minutes plus 3 minutes of questions. Posters are A0 portrait.
        At least one author of every accepted paper must register and present; papers that are
        not presented are withdrawn from the proceedings.</p>
   </div>
@@ -310,11 +321,8 @@ footer a{color:#ffdd77;text-decoration:none}
   <div class="card flat">
     <table>
       <tr><th>Day</th><th>Morning</th><th>Afternoon</th><th>Evening</th></tr>
-      <tr><td class="num">Mon 25 Oct</td><td>Tutorials</td><td>Tutorials</td><td>Welcome reception</td></tr>
-      <tr><td class="num">Tue 26 Oct</td><td>Keynote 1 + oral sessions</td><td>Poster session A</td><td>—</td></tr>
-      <tr><td class="num">Wed 27 Oct</td><td>Keynote 2 + oral sessions</td><td>Poster session B</td><td>Conference dinner</td></tr>
-      <tr><td class="num">Thu 28 Oct</td><td>Special sessions</td><td>Show &amp; tell</td><td>—</td></tr>
-      <tr><td class="num">Fri 29 Oct</td><td>Keynote 3</td><td>Closing &amp; awards</td><td>—</td></tr>
+      <tr><td class="num">Mon 1 Feb</td><td>Registration, inaugural session, Keynote 1</td><td>Parallel sessions, poster session</td><td>Cultural programme &amp; dinner</td></tr>
+      <tr><td class="num">Tue 2 Feb</td><td>Keynote 2, panel discussion</td><td>Parallel sessions, valedictory &amp; awards</td><td>—</td></tr>
     </table>
   </div>
 </section>
@@ -325,7 +333,7 @@ footer a{color:#ffdd77;text-decoration:none}
   <div class="card">
     <h3>Travel grants</h3>
     <p>A limited number of travel grants is available to students presenting a paper. Applications
-       close on 1 April 2027 and are assessed on need and on the quality of the accepted paper.</p>
+       close on 20 December 2026 and are assessed on need and on the quality of the accepted paper.</p>
     <h3>Mentoring and volunteering</h3>
     <p>Students can be matched with a senior researcher for the week, and volunteers receive free
        registration in exchange for about eight hours of help during the conference.</p>
@@ -355,7 +363,7 @@ footer a{color:#ffdd77;text-decoration:none}
   <h2>Registration</h2>
   <div class="card flat">
     <table>
-      <tr><th>Category</th><th>Early (to 31 Jul)</th><th>Late / on site</th></tr>
+      <tr><th>Category</th><th>Early (to 20 Jan)</th><th>Late / on site</th></tr>
       <tr><td>Member</td><td class="num">₹ 18,000</td><td class="num">₹ 24,000</td></tr>
       <tr><td>Non-member</td><td class="num">₹ 22,000</td><td class="num">₹ 28,000</td></tr>
       <tr><td>Student member</td><td class="num">₹ 9,000</td><td class="num">₹ 12,000</td></tr>
@@ -364,7 +372,7 @@ footer a{color:#ffdd77;text-decoration:none}
   </div>
   <div class="card" style="margin-top:18px">
     <p>The fee includes access to all sessions, the proceedings, lunches and the welcome reception.
-       The conference dinner is charged separately. Cancellations before 1 September 2027 are
+       The conference dinner is charged separately. Cancellations before 10 January 2027 are
        refunded minus a handling fee; after that date the fee is not refundable but may be transferred.</p>
     <div class="btns"><a class="btn p" href="#">Register now</a></div>
   </div>
@@ -400,7 +408,7 @@ footer a{color:#ffdd77;text-decoration:none}
 
 <footer>
   <div class="wrap">
-    <div><b>SOHW 2027</b><br>25–29 October 2027, IIT Kharagpur</div>
+    <div><b>SOHW 2027</b><br>1–2 February 2027, IIT Kharagpur Research Park</div>
     <div>General enquiries<br><a href="mailto:info@sohw2027.org">info@sohw2027.org</a></div>
   </div>
 </footer>
@@ -408,7 +416,7 @@ footer a{color:#ffdd77;text-decoration:none}
 <script>
 /* ---------- live clock + countdown : EDIT THESE TWO LINES ---------- */
 var TZ    = "Asia/Kolkata";                        /* conference time zone */
-var START = new Date("2027-10-25T00:00:00+05:30"); /* first day of conference */
+var START = new Date("2027-02-01T00:00:00+05:30"); /* first day of conference */
 
 function tick(){
   var now = new Date();
