@@ -75,6 +75,22 @@ nav a:hover,nav a.on{background:var(--blue-dark);color:#fff}
 .ticker a{color:#b07d00}
 @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-100%)}}
 
+   /* ---- CALL FOR PAPERS: expandable track blocks ---- */
+.track{background:#fff;border:1px solid var(--line);border-radius:7px;margin-bottom:9px}
+.track>summary{cursor:pointer;list-style:none;padding:14px 48px 14px 17px;
+  font-size:15.5px;line-height:1.45;color:var(--ink);position:relative}
+.track>summary::-webkit-details-marker{display:none}
+.track>summary::after{content:"+";position:absolute;right:18px;top:9px;
+  font-size:24px;font-weight:700;color:var(--gold)}
+.track[open]>summary::after{content:"\2013"}
+.track>summary:hover{background:var(--blue-soft);border-radius:6px}
+.track>summary b{font-family:"Barlow Condensed",sans-serif;font-size:17px;
+  letter-spacing:.05em;text-transform:uppercase;color:var(--blue);margin-right:10px}
+.track .body{padding:14px 18px 16px;border-top:1px solid var(--line)}
+.track .body>p{margin:0 0 10px;font-size:14.5px;font-style:italic;color:var(--muted)}
+.track .body ul{margin:0;padding-left:20px;font-size:15px}
+.track .body li{margin-bottom:5px}
+   
 /* ---------- sections ---------- */
 main{padding:34px 0 10px}
 section{margin-bottom:40px;scroll-margin-top:72px}
@@ -291,27 +307,122 @@ footer a{color:#ffdd77;text-decoration:none}
   <p class="hint"></p>
 </section>
 
-<!-- ====================== CALLS ====================== -->
 <section id="calls">
   <h2>Call for papers</h2>
   <div class="card">
-    <p>Abstracts are invited on all aspects of the science of happiness and well-being, from any
-       discipline. Submissions are peer reviewed and selected papers presented at this conference will be published as special volume with Springer.</p>
-    <h3>Topics</h3>
-    <ul class="topics">
-      <li>Physical Health, Happiness & Wellbeing </li><li>Psychological & Emotional Wellbeing</li>
-      <li>Education & Student Wellbeing </li><li>Workplace Happiness & Organizational Wellbeing</li>
-      <li>Socio-Economic & Community Wellbeing</li><li>Sustainability, Environment & </li>
-      <li>Holistic, Spiritual & Cultural Dimensions</li><li> Technology for Wellbeing Systems</li>
-   
-    </ul>
-    <h3>Submission</h3>
-    <p>Abstract must be up to 1 page including references, single-blind review,
-       and submitted in PDF through the submission system. Selected papers presented at this conference will be published as special volume with Springer</p>
-    <div class="btns"><a class="btn p" href="https://cmt3.research.microsoft.com/ICSHAW2027" target="_blank" rel="noopener noreferrer">Go to submission system</a></div>
+    <p>Abstracts are invited on all aspects of the science of happiness and wellbeing, from any
+       discipline. Submissions are peer reviewed and accepted contributions appear in the
+       conference proceedings. The conference is organised around eight tracks — choose the one
+       that best fits your work when you submit.</p>
+  </div>
+
+  <h3 style="margin-top:26px">Conference tracks</h3>
+  <p class="hint" style="margin-bottom:14px">Click a track to see its key topics.</p>
+
+    <details class="track" open>
+      <summary><b>Track 1</b>The Science of Flourishing — Neuroscience, Psychometrics &amp; Interventions</summary>
+      <div class="body">
+        <p>Explores empirical foundations, measurement methodologies, and clinical or behavioral interventions.</p>
+        <ul>
+          <li>Neurobiology of positive affect, gratitude, and prosociality</li>
+          <li>Psychometrics, biomarkers, and longitudinal assessment of wellbeing</li>
+          <li>Cognitive-behavioral mechanisms of emotional regulation and resilience</li>
+          <li>Efficacy and cultural adaptation of Positive Psychology Interventions (PPIs)</li>
+        </ul>
+      </div>
+    </details>
+    <details class="track">
+      <summary><b>Track 2</b>Mind-Body Synergy — Physical Health, Lifestyle &amp; Longevity</summary>
+      <div class="body">
+        <p>Examines the bidirectional link between physiological health, preventive medicine, and subjective wellbeing.</p>
+        <ul>
+          <li>Sleep architecture, circadian rhythms, and affective health</li>
+          <li>Physical activity, nutrition, and the gut-brain axis in mood regulation</li>
+          <li>Psychological wellbeing in chronic illness management and recovery</li>
+          <li>Biopsychosocial determinants of healthy aging and longevity</li>
+        </ul>
+      </div>
+    </details>
+    <details class="track">
+      <summary><b>Track 3</b>Flourishing Campuses — Education, Pedagogy &amp; Student Wellbeing</summary>
+      <div class="body">
+        <p>Focuses on transforming schools and higher education into ecosystems that nurture both academic excellence and mental health.</p>
+        <ul>
+          <li>Institutional frameworks for student mental health and crisis prevention</li>
+          <li>Pedagogical innovations: reducing assessment anxiety and fostering intrinsic motivation</li>
+          <li>Educator wellbeing, burnout prevention, and compassionate leadership</li>
+          <li>Campus belonging, inclusivity, and peer-support networks</li>
+        </ul>
+      </div>
+    </details>
+    <details class="track">
+      <summary><b>Track 4</b>Human-Centric Organizations — Workplace Happiness &amp; Leadership</summary>
+      <div class="body">
+        <p>Investigates organizational behavior, management practices, and the evolving nature of work.</p>
+        <ul>
+          <li>Psychological safety, trust, and meaningful work in modern organizations</li>
+          <li>Wellbeing in remote, hybrid, and AI-augmented workplaces</li>
+          <li>Burnout epidemiology and structural interventions beyond individual self-care</li>
+          <li>Ethical leadership, organizational culture, and employee flourishing</li>
+        </ul>
+      </div>
+    </details>
+    <details class="track">
+      <summary><b>Track 5</b>Wellbeing Economics, Public Policy &amp; Social Equity</summary>
+      <div class="body">
+        <p>Addresses macro-level structural determinants of societal happiness and policy design.</p>
+        <ul>
+          <li>&ldquo;Beyond GDP&rdquo; metrics and national wellbeing accounting</li>
+          <li>Distributive justice: housing, healthcare access, and income security</li>
+          <li>Public policy interventions for vulnerable and marginalized populations</li>
+          <li>Civic trust, governance, and institutional determinants of life satisfaction</li>
+        </ul>
+      </div>
+    </details>
+    <details class="track">
+      <summary><b>Track 6</b>Planetary Health — Environment, Sustainability &amp; Ecological Wellbeing</summary>
+      <div class="body">
+        <p>Explores the intersection of environmental stewardship, urban design, and human flourishing.</p>
+        <ul>
+          <li>Biophilia, urban green spaces, and nature-based mental health interventions</li>
+          <li>Climate psychology: eco-anxiety, ecological grief, and resilience</li>
+          <li>Sustainable consumption, minimalism, and eudaimonic wellbeing</li>
+          <li>Environmental justice and community vulnerability to climate change</li>
+        </ul>
+      </div>
+    </details>
+    <details class="track">
+      <summary><b>Track 7</b>Digital Flourishing — Human-Centered Technology &amp; AI</summary>
+      <div class="body">
+        <p>Focuses on designing and evaluating technology to enhance rather than erode human attention and connection.</p>
+        <ul>
+          <li>Positive computing, ethical AI, and wellbeing-by-design frameworks</li>
+          <li>Digital phenotyping, wearables, and mental health monitoring</li>
+          <li>Social media algorithms, attention restoration, and digital boundaries</li>
+          <li>AI companionship, virtual communities, and human-AI interaction</li>
+        </ul>
+      </div>
+    </details>
+    <details class="track">
+      <summary><b>Track 8</b>Culture, Spirituality &amp; Social Connection</summary>
+      <div class="body">
+        <p>Examines cross-cultural perspectives on the &ldquo;good life&rdquo; and the social fabric of human thriving.</p>
+        <ul>
+          <li>Cross-cultural and indigenous conceptualizations of hedonic vs. eudaimonic wellbeing</li>
+          <li>Contemplative traditions, mindfulness, ritual, and existential meaning</li>
+          <li>Epidemiology of loneliness and architectural and civic solutions for social capital</li>
+          <li>Altruism, volunteerism, and intergenerational community building</li>
+        </ul>
+      </div>
+    </details>
+
+  <div class="card" style="margin-top:22px">
+    <h3 style="margin-top:0">Submission</h3>
+    <p>Papers must be up to 4 pages plus one page of references, anonymised for double-blind review,
+       and submitted in PDF through the submission system. State your chosen track on the first page.</p>
+    <div class="btns"><a class="btn p" href="#">Go to submission system</a></div>
   </div>
 </section>
-
 <!-- ====================== AUTHORS ====================== -->
 <section id="authors">
   <h2>Information for authors</h2>
